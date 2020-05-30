@@ -9,11 +9,11 @@
     
 <?php 
    
-    $paises = array("argentina", "mexico", "usa", "japon");
+    $paises = array("argentina","brasil", "chile","mexico", "usa", "japon");
     foreach($paises as $indice => $valor)
     {
-        echo "indice : $indice<br/>";
-        echo "valor : $valor <br/> ";
+        echo "<input type='checkbox' 
+                value='$indice'> $valor";
    }
         
 ?>
