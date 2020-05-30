@@ -21,6 +21,14 @@
         }
         return $total;
     }
+    // Genera un menu de opciones
+    function menuVertical($opciones){
+        echo"<ul>";
+        while(list($opcion,$enlace)=each($opciones))
+        echo "<li><a href='$enlace'>$opcion</a></li>";
+        echo "</ul>";
+        }
+
 
 ?>
     
@@ -31,6 +39,15 @@
     $datos= array(1,2,3,4,5,6,7,8,9,10);
     $resultado=suma_vector($datos);
     echo "<p><em>La suma del vector es</em>:<strong> $resultado</strong></p>";
+
+    $ops=array("Principal"=>"principal.html",
+                "Consultas"=>"consultas.html",
+                "Reportes"=>"reportes.html",
+                "Registros"=>"registros.html",
+                "Ayuda"=>"ayuda.html");
+    
+    menuVertical($ops);    
+
 ?>
     
 </body>
