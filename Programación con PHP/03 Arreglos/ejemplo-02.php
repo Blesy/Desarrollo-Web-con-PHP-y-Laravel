@@ -8,18 +8,19 @@
 <body>
 
 <?php
-    $paises = array("argentina", "mexico", "usa", "japon");
+    $paises = array("cuba","argentina", "mexico", "usa", "japon");
     reset($paises); // coloca el indice al principio
+    
+    echo "<select name='paises' >";
     do
     {
         // Recupera el indice
         $clave = key($paises);
         // Recupera el valor
         $valor = current($paises);
-        echo "clave = $clave <br/>";
-        echo "valor = $valor <br/>";
+        echo "<option value='$clave'>$valor </option> ";
     }while(next($paises)); // se mueve al siguiente valor del vector
-
+    echo "</select>";
 ?>
     
 </body>
