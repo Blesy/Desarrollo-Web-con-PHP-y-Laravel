@@ -41,6 +41,10 @@
         return $suma;
     }
 
+    function incrementar (&$dato, $incremento)
+    {
+        $dato += $incremento;
+    }
 ?>
     
 <?php 
@@ -66,6 +70,10 @@
     echo "<p>valor de x= $x </p>";
     echo "<p>valor de y= $y </p>";
 
+    $val = 10;
+    echo "Valor original = " . $val . "<br/>";
+    incrementar ($val, 30);
+    echo "Valor modificado = " . $val . "<br/>";
 
 ?>
     
