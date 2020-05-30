@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body style="width:800px">
-    
+<body class="p-4" style="width:800px">
+
+ <h1>Datos de Cliente</h1>   
+
 <form action= 'procesar01.php' method='post'>
     <div class='form-group'>
         <label for='nombre'>Nombre:</label>    
@@ -16,7 +18,7 @@
    </div>
    <div class='form-group'>
        <label for='edad'>Edad</label>
-       <input type='date' class='form-control' id='edad' name='edad'>
+       <input type='number' class='form-control' id='edad' name='edad'>
    </div> 
 
    <div class='form-check'>
@@ -54,14 +56,13 @@
             <option value="azul">azul
         </select>
     </div>        
-    <div class='form-group'></div>
+    <div class='form-group'>
         <label for="comentario">Comentarios</label>
         <textarea  class="form-control" cols="50" rows="10" id="comentario" name="comentario"></textarea>
     </div>
-    
-
-    
+     
     <button type="submit" class="btn btn-primary">Enviar</button>
+    <a class="btn btn-primary" href="http://www.google.com" role="button">Google</a>
 
 </form>
 
