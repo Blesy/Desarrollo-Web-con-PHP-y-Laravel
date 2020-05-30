@@ -45,6 +45,14 @@
     {
         $dato += $incremento;
     }
+
+    function mostrarCadena ()
+    {
+        $cadena = "Cadena local";
+        echo "Cadena 2 = " . $cadena . "<br>";
+        echo "Cadena 1 GLOBAL = " . $GLOBALS['cadena'] . "<br />";
+    }
+
 ?>
     
 <?php 
@@ -74,6 +82,11 @@
     echo "Valor original = " . $val . "<br/>";
     incrementar ($val, 30);
     echo "Valor modificado = " . $val . "<br/>";
+
+    $cadena = "Cadena global";
+    echo "Cadena 1 = ".$cadena."<br />";
+    mostrarCadena();
+
 
 ?>
     
