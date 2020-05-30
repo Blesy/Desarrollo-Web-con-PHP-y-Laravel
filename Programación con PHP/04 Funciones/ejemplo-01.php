@@ -29,6 +29,17 @@
         echo "</ul>";
         }
 
+    function sumatoria()
+    {
+        $numeroParametros = func_num_args();
+        $parametros = func_get_args();
+        $suma = 0;
+        for($i=0; $i < $numeroParametros; $i++)
+        {
+        $suma += $parametros[$i];
+        }
+        return $suma;
+    }
 
 ?>
     
@@ -48,6 +59,13 @@
                 "Editar"=>"editar.php");
     
     menuVertical($ops);    
+
+    $x = sumatoria(1,2,3,4,5);
+    $y = sumatoria (6,7,8,9,10,11,12,13,14,15);
+
+    echo "<p>valor de x= $x </p>";
+    echo "<p>valor de y= $y </p>";
+
 
 ?>
     
