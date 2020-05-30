@@ -7,8 +7,9 @@
 </head>
 <body>
 <?php
-    $paises = array("argentina", "mexico", "usa", "japon");
+    $paises = array("argentina", "españa","mexico", "usa", "japon", "alemania");
     echo "<table>";
+    echo "<tr><th>Numero</th><th>Nombre</th></tr>";
     for($i=0; $i < count($paises); $i++)
     {
        echo "<tr>";
