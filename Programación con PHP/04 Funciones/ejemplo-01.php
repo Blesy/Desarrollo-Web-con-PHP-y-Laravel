@@ -40,11 +40,12 @@
     $resultado=suma_vector($datos);
     echo "<p><em>La suma del vector es</em>:<strong> $resultado</strong></p>";
 
-    $ops=array("Principal"=>"principal.html",
-                "Consultas"=>"consultas.html",
-                "Reportes"=>"reportes.html",
-                "Registros"=>"registros.html",
-                "Ayuda"=>"ayuda.html");
+    $ops=array("Principal"=>"principal.php",        
+                "Consultas"=>"consulta.php",
+                "Reportes"=>"reporte.php",
+                "Registros"=>"registro.php",
+                "Ayuda"=>"ayuda.php",
+                "Editar"=>"editar.php");
     
     menuVertical($ops);    
 
