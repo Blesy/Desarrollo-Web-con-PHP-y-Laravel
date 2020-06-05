@@ -19,33 +19,40 @@
         $desc = "Masculino"; 
         
     echo "Sexo: " . $desc ;
-
+    // Ocupacion
     if (isset($_GET['ocupaciones'])){
         $ocupaciones= $_GET['ocupaciones'];
 
         for ($i=0;$i<count($ocupaciones); $i++)
         echo "<p>Ocupación " .  ($i+1) . ": $ocupaciones[$i] </p>";
         
-        }
+     }
         else
-        echo "<p>Debe seleccionar al menos una ocupación</p>";
-
-        if (isset($_GET['pwd01']) and !empty($_GET['pwd01'])){
-            $pwd01 = $_GET['pwd01'];
-            if (isset($_GET['pwd02']) and !empty($_GET['pwd02'])){
+            echo "<p>Debe seleccionar al menos una ocupación</p>";
+     // Contraseña
+    if (isset($_GET['pwd01']) and !empty($_GET['pwd01'])){
+        $pwd01 = $_GET['pwd01'];
+        if (isset($_GET['pwd02']) and !empty($_GET['pwd02'])){
             $pwd02 = $_GET['pwd02'];
             if ($pwd01==$pwd02)
-            echo "<p>Contraseñas correctas</p>";
+                echo "<p>Contraseñas correctas</p>";
             else
-            echo "<p>Contraseñas no son iguales</p>";
+                echo "<p>Contraseñas no son iguales</p>";
             
             }
             else
-            echo "<p>No confirmo la contraseña</p>";
-            }
-            else
-            echo "<p>No escribio la contraseña</p>";
-
+                echo "<p>No confirmo la contraseña</p>";
+    }
+    else
+       echo "<p>No escribio la contraseña</p>";
+    
+    // Color
+    if(isset($_GET['color']) and $_GET['color'] != "0" ){
+        $color = $_GET['color'];
+            echo "Color Seleccionado: $color";
+     }
+    else
+        echo "Debe seleccionar al menos un color<br/>";        
 
 ?>
 

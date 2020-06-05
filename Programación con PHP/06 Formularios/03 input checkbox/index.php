@@ -59,9 +59,14 @@
         <input type='password' class="form-control" id='pwd02' name='pwd02'>
         <small id="pwd02" class="form-text text-muted">Confirmar una contraseña</small>
     </div> 
-
-
-
+    <div class="form-group">
+    <label for="color">Color Favorito</label>
+        <select name="color" id="color" class="form-control"  >
+            <option value="rojo" selected>rojo
+            <option value="verde">verde
+            <option value="azul">azul
+        </select>
+    </div>
 
     <button input type='submit' class="btn btn-primary" >Aceptar</button>
 
