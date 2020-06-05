@@ -16,7 +16,8 @@
         <input type="text" class="form-control" name="radio" id="radio">
         <small id="radio" class="form-text text-muted">Indicar el radio </small>
     </div>
-    <input type="submit" value="Calcular">
+    
+    <button input type='submit' class="btn btn-primary" >Calcular</button>
 
 </form>
 
