@@ -21,7 +21,7 @@
     </div> 
     
     <div class="form-group" >
-        <label for='edad'>Fecha de nacimiento</label>    
+        <label for='fecha'>Fecha de nacimiento</label>    
         <input type='date' class="form-control" id='fecha' name='fecha'>
         <small id="fecha" class="form-text text-muted">Seleccione la fecha correcta</small>
     </div> 
@@ -30,9 +30,10 @@
     <label for='puestos'>Puestos</label>    
     <select name='puestos' id='puestos' class="form-control" >
     <?php
-            for ($i=0;$i<count ($puestos); $i++ )
+            for ($i=0;$i< count($puestos); $i++ ){
                 $puesto = $puestos[$i]['descripcion'];
-                echo "<option value =$i> $puesto";
+                echo "<option value ='$i'> $puesto </option>";
+            }    
     ?>
     </select>
     </div>
