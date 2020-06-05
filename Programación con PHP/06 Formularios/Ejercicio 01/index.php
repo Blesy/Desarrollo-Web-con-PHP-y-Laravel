@@ -32,7 +32,7 @@
     <?php
             for ($i=0;$i< count($puestos); $i++ ){
                 $puesto = $puestos[$i]['descripcion'];
-                echo "<option value ='$i'> $puesto </option>";
+                echo "<option value='$i'> $puesto </option>";
             }    
     ?>
     </select>
