@@ -78,7 +78,10 @@
         <option value="holandes">Holandés
     </select>
 </div>
-
+    <div class="form-group">
+    <label for="comentario">Escriba un comentario</label>
+        <textarea cols="50" rows="10" id="comentario" name="comentario" class="form-control" ></textarea>
+    </div>
     <button input type='submit' class="btn btn-primary" >Aceptar</button>
 
 </form>

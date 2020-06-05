@@ -63,6 +63,17 @@
     else
        echo "Debe seleccionar al menos un idioma<br/>";
 
+    if(isset($_GET['comentario'])){
+        $comentario = $_GET['comentario'];
+        if(empty($comentario)==false)
+        echo "Su comentario es: $comentario";
+        else
+        echo "El comentario no puede estar vacío";
+        }
+        else
+        echo "No existe Comentario";    
+
+
 ?>
 
 
