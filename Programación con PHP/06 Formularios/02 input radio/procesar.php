@@ -10,8 +10,15 @@
 <?php
     $nombre = $_GET['nombre'];
     $edad = $_GET['edad'];
-    echo "Su Nombre es: $nombre";
-    echo "Su Edad es : $edad ";
+    $sexo = $_GET['sexo'];
+    echo "Su Nombre es: $nombre <br/>";
+    echo "Su Edad es : $edad <br/>";
+    if ($sexo == 'm')
+     $desc = "Femenino";
+    else
+        $desc = "Masculino"; 
+        
+    echo "Sexo: " . $desc ;
 ?>
 
 
