@@ -26,6 +26,16 @@
         <small id="fecha" class="form-text text-muted">Seleccione la fecha correcta</small>
     </div> 
 
+    <div class="form-group" >
+    <select name='puestos' id='puestos' class="form-control" >
+    <?php
+            for ($i=0;$i<count ($puestos); $i++ )
+                echo "<option value =$i> $puestos[$i]['descripcion']";
+    ?>
+
+    </select>
+    </div>
+
 
     </form>
 
