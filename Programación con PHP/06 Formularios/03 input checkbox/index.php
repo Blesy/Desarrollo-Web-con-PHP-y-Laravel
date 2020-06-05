@@ -49,6 +49,20 @@
         <label class="form-check-label" for="empresario">Empresario</label>
     </div>
 
+    <div class="form-group" >
+        <label for='pwd01'>Contraseña</label>    
+        <input type='password' class="form-control" id='pwd01' name='pwd01'>
+        <small id="pwd01" class="form-text text-muted">Escriba una contraseña</small>
+    </div> 
+    <div class="form-group" >
+        <label for='pwd02'>Cofirmar Contraseña</label>    
+        <input type='password' class="form-control" id='pwd02' name='pwd02'>
+        <small id="pwd02" class="form-text text-muted">Confirmar una contraseña</small>
+    </div> 
+
+
+
+
     <button input type='submit' class="btn btn-primary" >Aceptar</button>
 
 </form>
