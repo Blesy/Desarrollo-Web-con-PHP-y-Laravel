@@ -54,6 +54,15 @@
     else
         echo "Debe seleccionar al menos un color<br/>";        
 
+    if(isset($_GET['idiomas']) ){
+        $idiomas = $_GET['idiomas'];
+            
+        foreach ($idiomas as $idioma)
+            echo "<p>Idioma: $idioma </p>";
+    }
+    else
+       echo "Debe seleccionar al menos un idioma<br/>";
+
 ?>
 
 

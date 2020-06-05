@@ -68,6 +68,17 @@
         </select>
     </div>
 
+    <div class="form-group">
+    <label for="color">Idiomas que domina</label>
+    <select multiple size="3" name="idiomas[]" class="form-control">
+        <option value="español" >Español
+        <option value="ingles" >Inglés
+        <option value="frances">Francés
+        <option value="aleman">Alemán
+        <option value="holandes">Holandés
+    </select>
+</div>
+
     <button input type='submit' class="btn btn-primary" >Aceptar</button>
 
 </form>
