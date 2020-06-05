@@ -27,12 +27,13 @@
     </div> 
 
     <div class="form-group" >
+    <label for='puestos'>Puestos</label>    
     <select name='puestos' id='puestos' class="form-control" >
     <?php
             for ($i=0;$i<count ($puestos); $i++ )
-                echo "<option value =$i> $puestos[$i]['descripcion']";
+                $puesto = $puestos[$i]['descripcion'];
+                echo "<option value =$i> $puesto";
     ?>
-
     </select>
     </div>
 
