@@ -3,7 +3,7 @@
     mysqli_report(MYSQLI_REPORT_ALL); 
     $servidor = "mysql.miservidor.mx";
     $usuario = "gerardo";
-    $contraseña = "12AB34cd*";
+    $contraseña = "2197abcd*";
     $basededatos="cajaAhorros";
 
 ?> 
