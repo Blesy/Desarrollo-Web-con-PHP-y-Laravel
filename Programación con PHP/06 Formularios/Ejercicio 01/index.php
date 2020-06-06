@@ -78,6 +78,9 @@
         <label class="form-check-label" for="estudiante">Estudia?</label>
     </div>
 
+    <button input type='submit' class="btn btn-primary" >Calcular</button>
+
+           
 
     </form>
 
