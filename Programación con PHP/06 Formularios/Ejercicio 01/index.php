@@ -38,6 +38,40 @@
     </select>
     </div>
 
+    <div class="form-group" >
+    <label for='turnos'>Turnos</label>    
+    <select name='turnos' id='turnos' class="form-control" >
+    <?php
+            for ($i=0;$i< count($turnos); $i++ ){
+                $turno = $turnos[$i]['desc'];
+                echo "<option value='$i'> $turno </option>";
+            }    
+    ?>
+    </select>
+    </div>        
+    Genero
+    <div class="form-check">
+        <input type="radio" class="form-check-input" id="femenino" name="genero" value="F" checked>
+        <label class="form-check-label" for="femenino">Femenino</label>
+    </div>    
+    <div class="form-check">
+    <input type="radio" class="form-check-input" id="masculino" name="genero" value="M">
+    <label class="form-check-label" for="masculino">Masculino</label>
+    </div> 
+
+    <div class="form-group" >
+    <label for='estado'>Estado Civil</label>    
+    <select name='estado' id='estado' class="form-control" >
+    <?php
+            for ($i=0;$i< count($estadoCivil); $i++ ){
+                $estado = $estadoCivil[$i]['desc'];
+                $id = $estadoCivil[$i]['id'];
+                echo "<option value='$id'> $estado </option>";
+            }    
+    ?>
+    </select>
+    </div>                
+
 
     </form>
 
