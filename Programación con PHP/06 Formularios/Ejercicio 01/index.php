@@ -65,8 +65,7 @@
     <?php
             for ($i=0;$i< count($estadoCivil); $i++ ){
                 $estado = $estadoCivil[$i]['desc'];
-                $id = $estadoCivil[$i]['id'];
-                echo "<option value='$id'> $estado </option>";
+                echo "<option value='$i'> $estado </option>";
             }    
     ?>
     </select>
