@@ -14,6 +14,17 @@
  <h2>Cliente Guardar</h2> 
  <hr/>  
 
+    <?php
+        include "config.php";
+
+        $conexion = new mysqli($servidor, $usuario, 
+                                $contraseña, $basededatos)
+
+        
+
+
+    ?>
+
 
  </body>
  </html>
