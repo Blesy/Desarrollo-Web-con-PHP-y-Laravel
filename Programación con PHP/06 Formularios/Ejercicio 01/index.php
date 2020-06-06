@@ -12,7 +12,7 @@
 <h1>Calculo del sueldo</h1>
    <?php include "configuracion.php";?>
     
-    <form action='calculos.php' method='post'></form>
+    <form action='calculos.php' method='post'>
 
     <div class="form-group" >
         <label for='nombre'>Nombre</label>    
@@ -79,8 +79,6 @@
     </div>
 
     <button input type='submit' class="btn btn-primary" >Calcular</button>
-
-           
 
     </form>
 
