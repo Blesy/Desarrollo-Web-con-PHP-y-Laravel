@@ -31,7 +31,7 @@
     $idEstadoCivil = $_POST['estado'];
     $estado = $estadoCivil[$idEstadoCivil]['desc']; 
     $estudia = (isset($_POST['estudia'])?'Si':'No');
-
+    $numHijos = $_POST['hijos'];
     $salarioBase = $puestos[$idPuesto]['sueldo'];
     $incremento = $turno[$idTurno]['inc'];
     $increntoTurno = $salarioBase * $incremento/100;
@@ -46,7 +46,7 @@
     else
         $incrementoEstudia = 0;        
 
-    $total = $sueldoBase + $incrementoTurno +  
+    $total = $salarioBase + $incrementoTurno +  
              $incrementoBeca + $incrementoEstudia;
 
     echo "Nombre      : $nombre <br/>";

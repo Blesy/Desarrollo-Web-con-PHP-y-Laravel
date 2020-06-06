@@ -70,7 +70,17 @@
     ?>
     </select>
     </div>  
-    
+    <div class="form-group" >
+    <label for='hijos'>Numero de hijos</label>    
+    <select name='hijos' id='hijos' class="form-control" >
+    <?php
+            for ($i=0;$i<= 10; $i++ ){
+                echo "<option value='$i'> $i </option>";
+            }    
+    ?>
+    </select>
+    </div>  
+
     <div class="form-check">
         <input type="checkbox" name="estudia" id="estudia"
         value="S">
