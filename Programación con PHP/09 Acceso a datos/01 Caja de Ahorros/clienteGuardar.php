@@ -17,10 +17,17 @@
     <?php
         include "config.php";
 
+        try{
         $conexion = new mysqli($servidor, $usuario, 
-                                $contraseña, $basededatos)
+                                $contraseña, $basededatos);
 
-        
+
+    }    
+        catch(Exception $e){
+        echo "Error: " . $e->getMessage();
+        }
+   ?>    
+
 
 
     ?>
