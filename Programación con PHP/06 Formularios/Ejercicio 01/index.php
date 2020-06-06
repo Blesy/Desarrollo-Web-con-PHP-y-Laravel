@@ -72,7 +72,11 @@
     </select>
     </div>  
     
-    
+    <div class="form-check">
+        <input type="checkbox" name="estudia" id="estudia"
+        value="S">
+        <label class="form-check-label" for="estudiante">Estudia?</label>
+    </div>
 
 
     </form>
