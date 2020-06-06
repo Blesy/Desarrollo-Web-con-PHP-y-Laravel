@@ -21,8 +21,27 @@
         $conexion = new mysqli($servidor, $usuario, 
                                 $contraseña, $basededatos);
 
-
-    }    
+        // Crea consulta preparada con 3 parametros
+        $consultaSQL = "INSERT INTO cuentas (nombre, correo,
+                                        fechaNacimiento, genero,
+                                        foto) 
+                                        VALUES (?, ?, ?, ?, ?)";
+                                    
+        $comandoSQL = $conexion->prepare($consultaSQL);        
+        
+        // Obtiene los valores del formulario
+        $nombre = $_POST['nombre'];
+        $correo = $_POST['correo'];
+        $fechaNacimiento = $_POST['fechaNacimiento'];
+        $genero = $_POST['genero'];
+        $foto=null;
+        // Asigna valores a cada uno de los 5 parametro de la consulta
+        $comandoSQL->bind_param("ssssb", $nombre,$correo,
+                                $fechaNacimiento, $genero, $foto);
+        $comandoSQL->send_long_data(4, file_get_contents($_FILES['foto']['tmp_name']));                                 
+        $comandoSQL->execute(); // Ejecuta consulta INSERT
+        echo "Cliente registrado con exito!!!";                                       
+        }    
         catch(Exception $e){
         echo "Error: " . $e->getMessage();
         }
