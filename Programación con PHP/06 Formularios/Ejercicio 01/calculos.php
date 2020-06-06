@@ -32,17 +32,34 @@
     $estado = $estadoCivil[$idEstadoCivil]['desc']; 
     $estudia = (isset($_POST['estudia'])?'Si':'No');
 
+    $salarioBase = $puestos[$idPuesto]['sueldo'];
+    $incremento = $turno[$idTurno]['inc'];
+    $increntoTurno = $salarioBase * $incremento/100;
+    
+    if ($genero=='F' and $estado=='Casado')
+            $incrementoBeca = $salarioBase*0.01*$numHijos;
+    else
+        $incrementoBeca = 0;
+
+    if ($estudia=='Si')
+        $incrementoEstudia = 0.02 * $salarioBase;
+    else
+        $incrementoEstudia = 0;        
+
+    $total = $sueldoBase + $incrementoTurno +  
+             $incrementoBeca + $incrementoEstudia;
 
     echo "Nombre      : $nombre <br/>";
     echo "Fecha       : $fecha <br/> ";
-    echo "Edad        : $aa <br>";
+    echo "Edad        : $aa años con $mm mes y $dd dias<br>";
     echo "Puesto      : $puesto<br/>";
     echo "Turno       : $turno <br/>";
     echo "Genero      : $descGenero <br/>";
     echo "Estado Civil: $estado<br/>";
     echo "Estudia     : $estudia <br/>";
+    echo "Ingreso Total: $total<br>";
 
-    
+
     
     
 ?>
