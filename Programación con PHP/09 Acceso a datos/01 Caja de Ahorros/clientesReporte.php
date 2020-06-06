@@ -14,6 +14,38 @@
  <h2>Cliente Reportes</h2> 
  <hr/>  
 
+ <?php
+        include "config.php";
+
+        try{
+        $conexion = new mysqli($servidor, $usuario, 
+                                $contraseña, $basededatos);
+
+        // Crea consulta preparada
+        $consultaSQL = "SELECT idcuenta, nombre, correo, fechaNacimiento, genero 
+                        FROM cuentas";
+                                    
+        $comandoSQL = $conexion->prepare($consultaSQL);        
+
+        $comandoSQL->execute(); // Ejecuta consulta SELECT
+        
+        // Establece las variables para obtener los datos
+        $comandoSQL->bind_result($idCuenta, $nombre, $correo, 
+                                $fechaNacimiento, $genero);
+        
+            while ($comandoSQL->fetch()==true){ // obtiene los datos
+
+                echo $idcuenta . $nombre . $correo . "<br/>";  
+
+            }    
+        }
+        catch(Exception $e){
+        echo "Error: " . $e->getMessage();
+        }  
+
+    ?>
+
+
 
  </body>
  </html>
