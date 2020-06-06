@@ -17,7 +17,7 @@
     $idEstadoCivil = $_POST['estado'];
     $estudia = (isset($_POST['estudia'])?'Si':'No');
 
-    echo "Nombre      : $ombre <br/>";
+    echo "Nombre      : $nombre <br/>";
     echo "Fecha       : $fecha <br/> ";
     echo "Puesto      : $idPuesto <br/>";
     echo "Turno       : $idTurno <br/>";
