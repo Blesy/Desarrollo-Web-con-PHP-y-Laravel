@@ -18,9 +18,9 @@
     </div> 
     
     <div class="form-group" >
-        <label for='edad'>Edad</label>    
-        <input type='text' class="form-control" id='edad' name='edad'>
-        <small id="edad" class="form-text text-muted">Valor numerico</small>
+        <label for='fecha'>Fecha</label>    
+        <input type='date' class="form-control" id='fecha' name='fecha'>
+        <small id="fecha" class="form-text text-muted">Fecha de nacimiento</small>
     </div> 
 
     <button input type='submit' class="btn btn-primary" > Aceptar</button>

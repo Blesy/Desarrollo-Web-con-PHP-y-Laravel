@@ -9,9 +9,16 @@
     
 <?php
     $nombre = $_GET['nombre'];
-    $edad = $_GET['edad'];
-    echo "Su Nombre es: $nombre";
-    echo "Su Edad es : $edad ";
+    $fecha = $_GET['fecha'];
+    echo "Su Nombre es: $nombre<br/>";
+    echo "Fecha : $fecha <br/>";
+    $hoy = new DateTime();
+    $fecha = new DateTime($fecha);
+    $edad = $hoy->diff($fecha);
+    echo "Años: $edad->y <br/>";
+    echo "Meses: $edad->m <br/>";
+    echo "dias: $edad->d <br/>";
+
 ?>
 
 
