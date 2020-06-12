@@ -36,14 +36,16 @@
         
             echo "<table class='table'>";
             echo "<thead class='thead-dark'>";                    
-            echo "<th>ID</th><th>Nombre </th><th>Correo</th><th>Fotografia</th>";
+            echo "<tr><th>ID</th><th>Nombre </th><th>Correo</th><th>Fotografia</th><th></th></tr>";
             echo "</thead>";
             while ($comandoSQL->fetch()==true){ // obtiene los datos
                 $imagen = "data:image/jpeg;base64," . base64_encode($foto);    
                 echo "<tr><td>$idCuenta</td>
                     <td>$nombre</td>
                     <td> $correo</td>
-                    <td><img src='$imagen' width='100px'/></td></tr>";  
+                    <td><img src='$imagen' width='100px'/></td>
+                    <td><a href='clienteDetalle?id=$idCuenta'>Detalle</td>
+                    </tr>";  
             }    
         }
         catch(Exception $e){
