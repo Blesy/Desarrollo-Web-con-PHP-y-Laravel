@@ -45,6 +45,8 @@
                     <td> $correo</td>
                     <td><img src='$imagen' width='100px'/></td>
                     <td><a href='clienteDetalle.php?id=$idCuenta'>Detalle</td>
+                    <td><a href='clienteEditar.php?id=$idCuenta'>Editar</td>
+                   
                     </tr>";  
             }    
         }
