@@ -41,7 +41,8 @@
             if ($comandoSQL->fetch()==true){ // obtiene los datos
                 
                 $imagen = "data:image/jpeg;base64," . base64_encode($foto);    
-                
+                $estadoF = ($genero=='F'? 'checked':'');
+                $estadoM = ($genero=='M'? 'checked':'');
                 echo "
                 <form action='clienteActualizar.php' method='post' enctype='multipart/form-data' >
                     <div class='form-group'>
@@ -52,11 +53,11 @@
                    <div>Genero</div>
                    <div class='form-group'>
                         <div class='custom-control custom-radio'>
-                                <input type='radio' class='custom-control-input'  id='femenino' name='genero' value='F' checked>
+                                <input type='radio' $estadoF class='custom-control-input'  id='femenino' name='genero' value='F'>
                                 <label class='custom-control-label' for='femenino'>Femenino</label>    
                         </div>
                         <div class='custom-control custom-radio'>
-                            <input type='radio' class='custom-control-input'  id='masculino' name='genero' value='M' >
+                            <input type='radio' $estadoM class='custom-control-input'  id='masculino' name='genero' value='M' >
                             <label class='custom-control-label' for='masculino'>Masculino</label>    
                         </div>
                     </div>
