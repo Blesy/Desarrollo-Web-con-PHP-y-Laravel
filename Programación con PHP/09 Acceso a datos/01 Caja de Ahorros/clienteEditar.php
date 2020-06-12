@@ -40,7 +40,8 @@
         
             if ($comandoSQL->fetch()==true){ // obtiene los datos
                 
-
+                $imagen = "data:image/jpeg;base64," . base64_encode($foto);    
+                
                 echo "
                 <form action='clienteActualizar.php' method='post' enctype='multipart/form-data' >
                     <div class='form-group'>
@@ -76,9 +77,10 @@
                         <textarea  class='form-control' cols='50' rows='10' id='direccion' name='direccion'>$direccion</textarea>
                         <small id='direccion' class='form-text text-muted'>Indique entre que calles y alguna referencia visible</small>
                     </div>
-                
+                    <img src='$imagen' width='100px'/>
+                     
                     <div class='custom-file'>
-                        <input type='file'  class='custom-file-input' id='foto' name='foto' required accept='.jpg, .png'  >
+                          <input type='file'  class='custom-file-input' id='foto' name='foto' required accept='.jpg, .png'  >
                         <label id='mensaje' class='custom-file-label' for='foto'>Seleccione fotografia</label>
                     </div> 
                 
