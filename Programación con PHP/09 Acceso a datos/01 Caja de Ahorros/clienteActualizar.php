@@ -22,14 +22,18 @@
                                 $contraseña, $basededatos);
 
         // Crea consulta preparada con 3 parametros
-        $consultaSQL = "UPDATE cuentas SET nombre=?,
+        $consultaConFotoSQL = "UPDATE cuentas SET nombre=?,
                                         correo=?,
                                         fechaNacimiento=?,
                                         genero=?,
                                         foto=?
                                         WHERE idcuenta=?";
                                     
-        $comandoSQL = $conexion->prepare($consultaSQL);        
+        $consultaSinFotoSQL = "UPDATE cuentas SET nombre=?,
+                                        correo=?,
+                                        fechaNacimiento=?,
+                                        genero=?
+                                        WHERE idcuenta=?";                                    
         
         // Obtiene los valores del formulario
         $idCuenta = $_POST['idcuenta'];
@@ -39,12 +43,22 @@
         $genero = $_POST['genero'];
 
         $foto=null;
-        // Asigna valores a cada uno de los 5 parametro de la consulta
-        $comandoSQL->bind_param("ssssbi", $nombre,$correo,
-                                $fechaNacimiento, $genero, $foto,$idCuenta);
-        $comandoSQL->send_long_data(4, file_get_contents($_FILES['foto']['tmp_name']));                                 
+
+        if ($_FILES['foto']['size']>0){
+            // Asigna valores a cada uno de los 5 parametro de la consulta
+            $comandoSQL = $conexion->prepare($consultaConFotoSQL);        
+            $comandoSQL->bind_param("ssssbi", $nombre,$correo,
+                               $fechaNacimiento, $genero, $foto,$idCuenta);
+            $comandoSQL->send_long_data(4, file_get_contents($_FILES['foto']['tmp_name']));                                 
+        }
+        else{
+            $comandoSQL = $conexion->prepare($consultaSinFotoSQL);        
+            $comandoSQL->bind_param("ssssi", $nombre,$correo,
+                               $fechaNacimiento, $genero,$idCuenta);
+        
+        }
         $comandoSQL->execute(); // Ejecuta consulta UPDATE
-        echo "Cliente registrado con exito!!!";                                       
+        echo "Cliente actualizado con exito!!!";                                       
         }    
         catch(Exception $e){
         echo "Error: " . $e->getMessage();
