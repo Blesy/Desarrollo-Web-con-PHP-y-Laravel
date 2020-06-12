@@ -10,13 +10,8 @@
 <body class='p-4' style='width:800px'>
 
  <?php include 'cabecera.php';?>
- 
-
-
-
  <h2>Cliente Editar</h2> 
  <hr/>  
-
  <?php
         include "config.php";
         try{
@@ -46,6 +41,11 @@
                 echo "
                 <form action='clienteActualizar.php' method='post' enctype='multipart/form-data' >
                     <div class='form-group'>
+                        <label for='nombre'>ID:</label>    
+                        <input type='text' value='$idCuenta' readonly class='form-control' id='idcuenta' name='idcuenta' >
+                        <small id='idcuenta' class='form-text text-muted'>Numero de cuenta</small>
+                        </div>
+                        <div class='form-group'>
                         <label for='nombre'>Nombre:</label>    
                         <input type='text' value='$nombre' class='form-control' id='nombre' name='nombre'  requiere placeholder='escriba su nombre' >
                         <small id='nombre' class='form-text text-muted'>Nombre y apellidos</small>
@@ -81,7 +81,7 @@
                     <img src='$imagen' width='100px'/>
                      
                     <div class='custom-file'>
-                          <input type='file'  class='custom-file-input' id='foto' name='foto' required accept='.jpg, .png'  >
+                          <input type='file'  class='custom-file-input' id='foto' name='foto' accept='.jpg, .png'  >
                         <label id='mensaje' class='custom-file-label' for='foto'>Seleccione fotografia</label>
                     </div> 
                 
