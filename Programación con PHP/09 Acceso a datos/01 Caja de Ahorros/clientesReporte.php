@@ -34,14 +34,14 @@
         $comandoSQL->bind_result($idCuenta, $nombre, $correo, 
                                 $fechaNacimiento, $genero, $foto);
         
-        $imagen = "data:image/jpeg;base64," . base64_encode($foto);    
             echo "<table class='table'>";                    
             echo "<th>ID</th><th>Nombre </th><th>Correo</th><th>Fotografia</th>";
             while ($comandoSQL->fetch()==true){ // obtiene los datos
+                $imagen = "data:image/jpeg;base64," . base64_encode($foto);    
                 echo "<tr><td>$idcuenta</td>
                     <td>$nombre</td>
                     <td> $correo</td>
-                    <td><img src='$imagen' width='120px'/></td></tr>";  
+                    <td><img src='$imagen' width='100px'/></td></tr>";  
             }    
         }
         catch(Exception $e){

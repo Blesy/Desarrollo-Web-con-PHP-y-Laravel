@@ -1,9 +1,9 @@
 <?php 
     // Activa reporte de todo error que se presente
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT ); 
-    $usuario = "gerardo";
-    $contraseña = "2197abcd*";
-    $servidor = "mysql.miservidor.mx";
+    $usuario = "root";
+    $contraseña = "12AB34cd*";
+    $servidor = "localhost";
     $basededatos="cajaAhorros";
 
 ?> 
