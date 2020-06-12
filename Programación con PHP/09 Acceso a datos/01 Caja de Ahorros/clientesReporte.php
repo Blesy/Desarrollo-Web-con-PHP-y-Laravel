@@ -22,8 +22,9 @@
                                 $contraseña, $basededatos);
 
         // Crea consulta preparada
-        $consultaSQL = "SELECT idcuenta, nombre, correo, fechaNacimiento, genero 
-                        FROM cuentas";
+        $consultaSQL = "SELECT idcuenta, nombre, correo, fechaNacimiento, 
+                                genero, foto 
+                                FROM cuentas";
                                     
         $comandoSQL = $conexion->prepare($consultaSQL);        
 
@@ -31,12 +32,16 @@
         
         // Establece las variables para obtener los datos
         $comandoSQL->bind_result($idCuenta, $nombre, $correo, 
-                                $fechaNacimiento, $genero);
+                                $fechaNacimiento, $genero, $foto);
         
+        $imagen = "data:image/jpeg;base64," . base64_encode($foto);    
+            echo "<table class='table'>";                    
+            echo "<th>ID</th><th>Nombre </th><th>Correo</th><th>Fotografia</th>";
             while ($comandoSQL->fetch()==true){ // obtiene los datos
-
-                echo $idcuenta . $nombre . $correo . "<br/>";  
-
+                echo "<tr><td>$idcuenta</td>
+                    <td>$nombre</td>
+                    <td> $correo</td>
+                    <td><img src='$imagen' width='120px'/></td></tr>";  
             }    
         }
         catch(Exception $e){
