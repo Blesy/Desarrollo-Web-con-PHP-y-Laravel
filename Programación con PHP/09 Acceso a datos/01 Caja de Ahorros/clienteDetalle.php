@@ -11,7 +11,7 @@
 
  <?php include "cabecera.php";?>
  
- <h2>Cliente Reportes</h2> 
+ <h2>Cliente Detalle</h2> 
  <hr/>  
 
  <?php
@@ -45,8 +45,8 @@
                  echo "<tr><th>ID</th><td>$idCuenta</td></tr>
                       <tr><th>Nombre</th><td>$nombre</td></tr>
                       <tr><th>Correo</th><td> $correo</td></tr>
-                      <tr><th>Correo</th><td> $fechaNacimiento</td></tr>
-                      <tr><th>Correo</th><td> $descGenero</td></tr>
+                      <tr><th>Fecha de Nacimiento</th><td> $fechaNacimiento</td></tr>
+                      <tr><th>Genero</th><td> $descGenero</td></tr>
                       <tr><th>Fotografia</th><td><img src='$imagen' width='100px'/></td></tr>";
                          
                  echo "</table>";
