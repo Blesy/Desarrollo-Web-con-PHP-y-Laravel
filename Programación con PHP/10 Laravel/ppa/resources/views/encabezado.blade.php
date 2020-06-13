@@ -8,5 +8,4 @@
 </head>
 <body>
     <img src={{asset("imagenes/PPA.png")}} alt="">
-    <h1>Catalogos</h1>
     <a href=".">Inicio</a>
