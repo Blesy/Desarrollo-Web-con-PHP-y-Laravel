@@ -52,7 +52,7 @@
                  echo "</table>";
                  echo "Seguro de eliminar? " .
                      "<a href='clienteEliminar.php?id=$idCuenta'> Si</a>" . 
-                     "<a href='clienteReporte.php'> No</a>" ;
+                     "<a href='clientesReporte.php'> No</a>" ;
             }
             else
                 echo "<h3>Cliente no existe!!!</h3>";
