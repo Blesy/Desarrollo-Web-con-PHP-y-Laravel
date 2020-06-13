@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/empleados","EmpleadosController@index");
+Route::get("/empleados/crear","EmpleadosController@crear");
+
 
 Route::get('/', function () {
     return view('index');

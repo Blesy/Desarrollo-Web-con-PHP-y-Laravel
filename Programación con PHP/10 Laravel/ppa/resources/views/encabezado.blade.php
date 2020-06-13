@@ -7,6 +7,6 @@
     <title>PPA</title>
 </head>
 <body>
-    <img src="imagenes/PPA.png" alt="">
+    <img src={{asset("imagenes/PPA.png")}} alt="">
     <h1>Catalogos</h1>
     <a href=".">Inicio</a>

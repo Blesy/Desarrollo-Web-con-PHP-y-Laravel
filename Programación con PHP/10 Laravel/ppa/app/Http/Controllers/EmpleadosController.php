@@ -10,5 +10,10 @@ class EmpleadosController extends Controller
 
         return view("empleados/index");
     }
+
+    function crear(){
+
+        return view("empleados/crear");
+    }
     //
 }
