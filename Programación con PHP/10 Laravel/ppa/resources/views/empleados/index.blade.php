@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empleados</title>
-</head>
-<body>
+@include ("encabezado")
 
-    <h1>Catalogo de empleados</h1>
+    <h2>Catalogo de empleados</h2>
     
-</body>
-</html>
+@include ("pie")
