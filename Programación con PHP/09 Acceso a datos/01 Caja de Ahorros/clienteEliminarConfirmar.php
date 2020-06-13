@@ -50,7 +50,9 @@
                       <tr><th>Fotografia</th><td><img src='$imagen' width='100px'/></td></tr>";
                          
                  echo "</table>";
-                 echo "Seguro de eliminar: " . " Si " . "No" ;
+                 echo "Seguro de eliminar? " .
+                     "<a href='clienteEliminar.php?id=$idCuenta'> Si</a>" . 
+                     "<a href='clienteReporte.php'> No</a>" ;
             }
             else
                 echo "<h3>Cliente no existe!!!</h3>";

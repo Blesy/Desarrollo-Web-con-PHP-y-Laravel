@@ -36,7 +36,7 @@
         
             echo "<table class='table'>";
             echo "<thead class='thead-dark'>";                    
-            echo "<tr><th>ID</th><th>Nombre </th><th>Correo</th><th>Fotografia</th><th colpan='3'>";
+            echo "<tr><th>ID</th><th>Nombre </th><th>Correo</th><th>Fotografia</th><th colspan='3'>Operaciones</th>";
             echo "</thead>";
             while ($comandoSQL->fetch()==true){ // obtiene los datos
                 $imagen = "data:image/jpeg;base64," . base64_encode($foto);    
