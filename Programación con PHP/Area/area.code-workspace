@@ -1,0 +1,38 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../01 Inicio"
+		},
+		{
+			"path": "../02 Estructuras de control"
+		},
+		{
+			"path": "../03 Arreglos"
+		},
+		{
+			"path": "../04 Funciones"
+		},
+		{
+			"path": "../05 POO"
+		},
+		{
+			"path": "../06 Formularios"
+		},
+		{
+			"path": "../07 Cookies"
+		},
+		{
+			"path": "../08 Sesiones"
+		},
+		{
+			"path": "../09 Acceso a datos"
+		},
+		{
+			"path": "../10 Laravel"
+		}
+	],
+	"settings": {}
+}
