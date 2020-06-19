@@ -40,10 +40,12 @@ class EmpleadosController extends Controller
                  );
 
         DB::table('empleados')->insert($empleado);
-        echo "Registro creado satisfactoriamente"; 
+
+        return view ("mensaje", ['texto'=>'Registro creado satisfactoriamente']); 
     }
     catch(Exception $e){
-        echo "Error: " . $e->getMessage();
+        return view ("mensaje", ['texto'=>'Error: '.$e->getMessage() ]); 
+
     }
 
 
