@@ -5,6 +5,8 @@
 <hr/>  
 
  <form action='guardar' method='post' enctype='multipart/form-data' >
+    
+  <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
     <div class='form-group'>
         <label for='nombre'>Nombre:</label>    
         <input type="text" class="form-control" id='nombre' name="nombre" requiere placeholder="escriba su nombre" >

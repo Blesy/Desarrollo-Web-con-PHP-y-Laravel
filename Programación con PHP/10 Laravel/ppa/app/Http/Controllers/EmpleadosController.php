@@ -21,6 +21,7 @@ class EmpleadosController extends Controller
         // Tomamos los datos del formulario nuevo
         $nombre = $resquest->input('nombre');
         $genero = $resquest->input('genero');
+        $RFC = $resquest->input('RFC');
         $fechaNacimiento = $resquest->input('fechaNacimiento');
         $fechaContrato = $resquest->input('fechaContrato');
         $correo = $resquest->input('correo');
@@ -28,6 +29,7 @@ class EmpleadosController extends Controller
 
         $empleado = array('nombre'=>$nombre,
                      'genero'=>$genero,
+                     'RFC'=>$RFC,
                      'fechaNacimiento'=>$fechaNacimiento,
                      'fechaContrato'=>$fechaContrato,
                      'correo'=>$correo,
