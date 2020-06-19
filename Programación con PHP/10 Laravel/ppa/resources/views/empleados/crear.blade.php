@@ -4,7 +4,7 @@
 
 <hr/>  
 
- <form action='guardar.php' method='post' enctype='multipart/form-data' >
+ <form action='guardar' method='post' enctype='multipart/form-data' >
     <div class='form-group'>
         <label for='nombre'>Nombre:</label>    
         <input type="text" class="form-control" id='nombre' name="nombre" requiere placeholder="escriba su nombre" >
