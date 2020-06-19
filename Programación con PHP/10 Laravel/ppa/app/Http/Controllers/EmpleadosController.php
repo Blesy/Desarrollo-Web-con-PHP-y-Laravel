@@ -8,7 +8,9 @@ class EmpleadosController extends Controller
 {
     function index(){
 
-        return view("empleados/index");
+        $empleados = DB::select('select * from empleados');
+        return view("empleados/index",['empleados'=>$empleados]);
+
     }
 
     function crear(){
@@ -26,14 +28,15 @@ class EmpleadosController extends Controller
         $fechaContrato = $resquest->input('fechaContrato');
         $correo = $resquest->input('correo');
         $direccion = $resquest->input('direccion');
-
+        $fotografia ="mifoto";     
         $empleado = array('nombre'=>$nombre,
                      'genero'=>$genero,
                      'RFC'=>$RFC,
                      'fechaNacimiento'=>$fechaNacimiento,
                      'fechaContrato'=>$fechaContrato,
                      'correo'=>$correo,
-                     'direccion'=>$direccion    
+                     'direccion'=>$direccion, 
+                     'fotografia'=>$fotografia   
                  );
 
         DB::table('empleados')->insert($empleado);
