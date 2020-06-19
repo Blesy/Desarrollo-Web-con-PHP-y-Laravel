@@ -15,7 +15,7 @@ class EmpleadosController extends Controller
 
     function detalle($id){
 
-        $empleados = DB::select('select * from empleados where id=[$id]');
+        $empleados = DB::select('select * from empleados where id=' . $id);
         return view("empleados/detalle",['empleado'=>$empleados[0]]);
 
     }
