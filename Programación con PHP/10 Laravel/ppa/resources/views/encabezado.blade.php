@@ -6,6 +6,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>PPA</title>
 </head>
-<body class="p-4" style="width:800px">
+<body class="p-4" style="width:1000px">
     <img src={{asset("imagenes/PPA.png")}} alt="">
-    <a href=".">Inicio</a>
+   <p> <a href=".">Inicio</a></p>

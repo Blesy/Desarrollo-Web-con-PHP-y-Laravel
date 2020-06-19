@@ -10,6 +10,8 @@
            <th>Genero</th>
            <th>Fecha Nacimiento</th>
            <th>Correo</th>
+           <th colspan='3' >Operaciones</th>
+ 
         </tr>
         @foreach ($empleados as $empleado)
          <tr>
@@ -18,6 +20,10 @@
             <td>{{$empleado->genero}}</td> 
             <td>{{$empleado->fechaNacimiento}}</td> 
             <td>{{$empleado->correo}}</td> 
+            <td><a href='empleados/detalle/{{$empleado->id}}'>Detalle</a></td> 
+            <td><a href='empleados/editar/{{$empleado->id}}'>Editar</a></td> 
+            <td><a href='empleados/eliminar/{{$empleado->id}}'>Eliminar</a></td> 
+            
           </tr>       
         @endforeach
            
