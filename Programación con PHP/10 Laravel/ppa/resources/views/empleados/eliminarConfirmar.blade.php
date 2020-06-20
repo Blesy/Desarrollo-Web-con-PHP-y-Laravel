@@ -17,8 +17,8 @@
 
     <div>
         Seguro de eliminar? 
-        <a href='empleados/eliminar/{{$empleado->id}}'> Si</a>
-        <a href='empleados'> No</a>
+        <a href='{{asset("empleados/eliminar/$empleado->id")}}'> Si</a>
+        <a href='{{asset("empleados")}}'> No</a>
     </div>
 
 
