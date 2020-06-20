@@ -26,17 +26,17 @@ class EmpleadosController extends Controller
         return view("empleados/crear");
     }
 
-    function guardar(Request $resquest){
+    function guardar(Request $request){
       try{
         // Tomamos los datos del formulario nuevo
-        $nombre = $resquest->input('nombre');
-        $genero = $resquest->input('genero');
-        $RFC = $resquest->input('RFC');
-        $fechaNacimiento = $resquest->input('fechaNacimiento');
-        $fechaContrato = $resquest->input('fechaContrato');
-        $correo = $resquest->input('correo');
-        $direccion = $resquest->input('direccion');
-        $archivoSubido = $resquest->file('foto');
+        $nombre = $request->input('nombre');
+        $genero = $request->input('genero');
+        $RFC = $request->input('RFC');
+        $fechaNacimiento = $request->input('fechaNacimiento');
+        $fechaContrato = $request->input('fechaContrato');
+        $correo = $request->input('correo');
+        $direccion = $request->input('direccion');
+        $archivoSubido = $request->file('foto');
         
         $nombreUnico = substr(md5(time()),0,16);
         $nombreOriginal = $archivoSubido->getClientOriginalName();
