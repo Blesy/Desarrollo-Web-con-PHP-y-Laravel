@@ -19,7 +19,9 @@
             <td>{{$empleado->nombre}}</td> 
             <td>{{($empleado->genero=='F'?'Femenino':'Masculino')}}</td> 
             <td>{{$empleado->fechaNacimiento}}</td> 
-            <td>{{$empleado->c orreo}}</td> 
+            <td>{{$empleado->correo}}</td> 
+            <td><img src='{{$empleado->fotografia}}'/></td> 
+
             <td><a href='empleados/detalle/{{$empleado->id}}'>Detalle</a></td> 
             <td><a href='empleados/editar/{{$empleado->id}}'>Editar</a></td> 
             <td><a href='empleados/eliminar/{{$empleado->id}}'>Eliminar</a></td> 
