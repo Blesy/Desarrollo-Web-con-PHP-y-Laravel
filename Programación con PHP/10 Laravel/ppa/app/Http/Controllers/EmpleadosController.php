@@ -11,6 +11,11 @@ class EmpleadosController extends Controller
         return view("empleados/index",['empleados'=>$empleados]);
     }
 
+    function listaGenero($genero){
+        $empleados = DB::select('call listagenero(?)', [$genero]);
+        return view("empleados/listaGenero",['empleados'=>$empleados]);
+    }
+
     function detalle($id){
         $empleados = DB::select('select * from empleados where id=' . $id);
         return view("empleados/detalle",['empleado'=>$empleados[0]]);

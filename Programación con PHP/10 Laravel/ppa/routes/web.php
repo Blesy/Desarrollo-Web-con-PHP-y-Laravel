@@ -21,6 +21,7 @@ Route::get("/empleados/editar/{id}","EmpleadosController@editar");
 Route::post("/empleados/actualizar/{id}","EmpleadosController@actualizar");
 Route::get("/empleados/eliminarConfirmar/{id}","EmpleadosController@eliminarConfirmar");
 Route::get("/empleados/eliminar/{id}","EmpleadosController@eliminar");
+Route::get("/empleados/listaGenero/{id}","EmpleadosController@listaGenero");
 
 
 Route::get('/', function () {
