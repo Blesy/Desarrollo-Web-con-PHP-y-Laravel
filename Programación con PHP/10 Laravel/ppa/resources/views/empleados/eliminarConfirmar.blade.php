@@ -1,6 +1,6 @@
 @include ("encabezado")
 
-    <h2>Borrar empleado</h2>
+    <h2>Eliminar empleado</h2>
 
    <table class='table'>
          <tr><th>Id</th><td>{{$empleado->id}}</td></tr> 
