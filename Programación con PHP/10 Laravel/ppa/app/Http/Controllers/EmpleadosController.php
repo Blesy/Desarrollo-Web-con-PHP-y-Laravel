@@ -76,12 +76,13 @@ class EmpleadosController extends Controller
           $direccion = $request->input('direccion');
           $archivoSubido = $request->file('foto');
           
+
+        if (Request()->hasFile('foto')==true){ // Con Fotografia      
           $nombreUnico = substr(md5(time()),0,16);
           $nombreOriginal = $archivoSubido->getClientOriginalName();
           $nombreFinal = $nombreUnico . "-" . $nombreOriginal;
           $fotografia=$archivoSubido->storeAs('fotografias', $nombreFinal);
-             
-          DB::update (
+          DB::update ( 
             'UPDATE empleados SET 
                 nombre=?,
                 genero=?,
@@ -103,7 +104,31 @@ class EmpleadosController extends Controller
                   $fotografia,
                   $id  
                 ]);
+        }
+        else{ // Sin fotografia
+            DB::update ( 
+                'UPDATE empleados SET 
+                    nombre=?,
+                    genero=?,
+                    RFC=?,
+                    fechaNacimiento=?,
+                    fechaContrato=?,
+                    correo=?,
+                    direccion=? 
+                    WHERE id=?',
+                    [
+                      $nombre,
+                      $genero,
+                      $RFC,
+                      $fechaNacimiento,
+                      $fechaContrato,
+                      $correo,
+                      $direccion,
+                      $id  
+                    ]);
 
+
+        }
                  return view ("mensaje", ['texto'=>'Registro actualizado satisfactoriamente']); 
       }
       catch(Exception $e){
