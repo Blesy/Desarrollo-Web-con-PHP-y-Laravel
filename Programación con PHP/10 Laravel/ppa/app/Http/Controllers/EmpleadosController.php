@@ -60,11 +60,9 @@ class EmpleadosController extends Controller
     }
     catch(Exception $e){
         return view ("mensaje", ['texto'=>'Error: '.$e->getMessage() ]); 
-
     }
 
-
-    }
+}
 
     function actualizar(Request $request, $id){
         try{
