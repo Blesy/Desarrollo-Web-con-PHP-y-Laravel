@@ -16,14 +16,14 @@ class CreateEmpleados extends Migration
         Schema::create('empleados', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string("nombre");
-            $table->string("RFC");
-            $table->string("genero");
-            $table->string("fechaNacimiento");
-            $table->string("fechaContrato");
-            $table->string("correo");
-            $table->string("direccion");
-            $table->binary("fotografia");
+            $table->string("nombre",50);
+            $table->string("RFC",25);
+            $table->string("genero",1);
+            $table->date("fechaNacimiento");
+            $table->date("fechaContrato");
+            $table->string("correo", 45);
+            $table->string("direccion", 200);
+            $table->string("fotografia");
         });
     }
 

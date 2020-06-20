@@ -36,7 +36,13 @@ class EmpleadosController extends Controller
         $fechaContrato = $resquest->input('fechaContrato');
         $correo = $resquest->input('correo');
         $direccion = $resquest->input('direccion');
-        $fotografia ="mifoto";     
+        $archivoSubido = $resquest->file('foto');
+        
+        $nombreUnico = substr(md5(time()),0,16);
+        $nombreOriginal = $archivoSubido->getClientOriginalName();
+        $nombreFinal = $nombreUnico . "-" . $nombreOriginal;
+        $fotografia=$archivoSubido->storeAs('fotografias', $nombreFinal);
+           
         $empleado = array('nombre'=>$nombre,
                      'genero'=>$genero,
                      'RFC'=>$RFC,
