@@ -59,7 +59,7 @@
     </div>
 
     <div class="custom-file">
-        <input type='file'  class="custom-file-input" id='foto' name='foto' required accept=".jpg, .png"  >
+        <input type='file'  class="custom-file-input" id='foto' name='foto' accept=".jpg, .png"  >
         <label id='mensaje' class="custom-file-label" for='foto'>Seleccione fotografia</label>
     </div> 
 
