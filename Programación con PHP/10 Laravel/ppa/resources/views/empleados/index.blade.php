@@ -17,7 +17,7 @@
          <tr>
             <td>{{$empleado->id}}</td> 
             <td>{{$empleado->nombre}}</td> 
-            <td>{{$empleado->genero}}</td> 
+            <td>{{($empleado->genero=='F'?'Femenino':'Masculino')}}</td> 
             <td>{{$empleado->fechaNacimiento}}</td> 
             <td>{{$empleado->correo}}</td> 
             <td><a href='empleados/detalle/{{$empleado->id}}'>Detalle</a></td> 
