@@ -15,7 +15,7 @@
 
    <div class='form-group'>
         <label for='nombre'>RFC:</label>    
-        <input type="text" class="form-control" id='RFC' name="RFC" requiere placeholder="escriba su RFC" >
+        <input type="text" value='{{$empleado->RFC}}' class="form-control" id='RFC' name="RFC" requiere placeholder="escriba su RFC" >
         <small id="RFC" class="form-text text-muted">Registro Federal de Causante</small>
    </div>
 
@@ -32,26 +32,30 @@
     </div>
    <div class='form-group'>
        <label for='fechaNacimiento'>Fecha de nacimiento</label>
-       <input type='date' class='form-control' id='fechaNacimiento' name='fechaNacimiento'>
+       <input type='date' value='{{$empleado->fechaNacimiento}}' class='form-control' id='fechaNacimiento' name='fechaNacimiento'>
        <small id="fechaNacimiento" class="form-text text-muted">Solo se aceptan clientes mayores de 18 años</small>
     </div> 
 
     <div class='form-group'>
        <label for='fechaContrato'>Fecha de contrato</label>
-       <input type='date' class='form-control' id='fechaContrato' name='fechaContrato'>
+       <input type='date' value='{{$empleado->fechaContrato}}' class='form-control' id='fechaContrato' name='fechaContrato'>
        <small id="fechaContrato" class="form-text text-muted">Solo se aceptan clientes mayores de 18 años</small>
     </div> 
 
    <div class='form-group'>
        <label for='correo'>Correo electrónico</label>
-       <input type='email' class='form-control' id='correo' name='correo'placeholder='usuario@dominio.com'>
+       <input type='email' value='{{$empleado->correo}}' class='form-control' id='correo' name='correo'placeholder='usuario@dominio.com'>
        <small id="correo" class="form-text text-muted">Escriba un correo con formato valido y existente</small>
      </div> 
    
     <div class='form-group'>
         <label for="direccion">Dirección</label>
-        <textarea  class="form-control" cols="50" rows="10" id="direccion" name="direccion"></textarea>
+        <textarea  class="form-control" cols="50" rows="10" id="direccion" name="direccion">{{$empleado->direccion}}</textarea>
         <small id="direccion" class="form-text text-muted">Indique entre que calles y alguna referencia visible</small>
+    </div>
+
+    <div> 
+        <img src='{{asset($empleado->fotografia)}}' width='120px' /> 
     </div>
 
     <div class="custom-file">
