@@ -25,6 +25,16 @@ class EmpleadosController extends Controller
         $empleados = DB::select('select * from empleados where id=?', [$id]);
         return view("empleados/eliminarConfirmar",['empleado'=>$empleados[0]]);
     }
+    
+    function eliminar($id){
+        try{
+            DB::table('empleados')->delete($id);
+            return view("mensaje",['texto'=>'Registro eliminado correctamente']);
+        }
+        catch (exception $e){
+            return view("mensaje",['texto'=>'Error: ' . $e->getMessage()]);
+        }
+    }
 
 
     function crear(){
