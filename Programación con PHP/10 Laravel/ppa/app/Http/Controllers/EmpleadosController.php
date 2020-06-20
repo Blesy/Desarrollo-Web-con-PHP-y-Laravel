@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 
 class EmpleadosController extends Controller
 {
+    // Metodo para la Api
+    function catalogo(){
+        $empleados = DB::select('select * from empleados');
+        return response()->json(['empleados'=>$empleados]);
+    }
+    function info($id){                                    
+        $empleados = DB::select('select * from empleados where id=' . $id);
+        return response()->json(['empleado'=>$empleados[0]]);
+    }
+    
     function index(){
         $empleados = DB::select('select * from empleados');
         return view("empleados/index",['empleados'=>$empleados]);
@@ -16,7 +26,7 @@ class EmpleadosController extends Controller
         return view("empleados/listaGenero",['empleados'=>$empleados]);
     }
 
-    function detalle($id){
+    function detalle($id){                                    
         $empleados = DB::select('select * from empleados where id=' . $id);
         return view("empleados/detalle",['empleado'=>$empleados[0]]);
     }

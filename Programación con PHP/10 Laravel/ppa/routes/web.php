@@ -23,6 +23,10 @@ Route::get("/empleados/eliminarConfirmar/{id}","EmpleadosController@eliminarConf
 Route::get("/empleados/eliminar/{id}","EmpleadosController@eliminar");
 Route::get("/empleados/listaGenero/{id}","EmpleadosController@listaGenero");
 
+Route::get('/api/catalogoEmpleados', 'EmpleadosController@catalogo');
+Route::get('/api/infoEmpleado/{id}', 'EmpleadosController@info');
+        nano
+
 
 Route::get('/', function () {
     return view('index');
