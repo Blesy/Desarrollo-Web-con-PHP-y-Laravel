@@ -8,4 +8,4 @@
 </head>
 <body class="p-4" style="width:1000px">
     <img src={{asset("imagenes/PPA.png")}} alt="">
-   <p> <a href=".">Inicio</a></p>
+   <p> <a href={{asset("/")}}>Inicio</a></p>

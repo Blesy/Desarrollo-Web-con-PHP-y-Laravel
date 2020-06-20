@@ -11,6 +11,8 @@
          <tr><th>Correo</th><td>{{$empleado->correo}}</td></tr> 
          <tr><th>RFC</th><td>{{$empleado->RFC}}</td> </tr>
          <tr><th>Dirección</th><td>{{$empleado->direccion}}</td></tr> 
-    </table>
+         <tr><th>Fotografia</th><td><img src='{{asset($empleado->fotografia)}}' width='120px' /></td></tr> 
+
+        </table>
 
 @include ("pie")
