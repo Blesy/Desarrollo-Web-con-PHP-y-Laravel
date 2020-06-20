@@ -25,7 +25,7 @@ Route::get("/empleados/listaGenero/{id}","EmpleadosController@listaGenero");
 
 Route::get('/api/catalogoEmpleados', 'EmpleadosController@catalogo');
 Route::get('/api/infoEmpleado/{id}', 'EmpleadosController@info');
-        nano
+        
 
 
 Route::get('/', function () {
