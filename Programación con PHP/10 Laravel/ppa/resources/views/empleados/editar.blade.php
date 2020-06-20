@@ -22,11 +22,11 @@
    <div>Genero</div>
    <div class='form-group'>
         <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input"  id='femenino' name='genero' value='F' checked>
+                <input type="radio" {{($empleado->genero=='F'?'checked':'')}} class="custom-control-input"  id='femenino' name='genero' value='F' >
                 <label class="custom-control-label" for="femenino">Femenino</label>    
         </div>
         <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input"  id='masculino' name='genero' value='M' >
+            <input type="radio" {{($empleado->genero=='M'?'checked':'')}} class="custom-control-input"  id='masculino' name='genero' value='M' >
             <label class="custom-control-label" for="masculino">Masculino</label>    
         </div>
     </div>
