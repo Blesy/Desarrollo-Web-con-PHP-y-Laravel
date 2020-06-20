@@ -17,8 +17,13 @@ class EmpleadosController extends Controller
     }
 
     function editar($id){
-        $empleados = DB::select('select * from empleados where id=' . $id);
+        $empleados = DB::select('select * from empleados where id=?', [$id]);
         return view("empleados/editar",['empleado'=>$empleados[0]]);
+    }
+
+    function eliminarConfirmar($id){
+        $empleados = DB::select('select * from empleados where id=?', [$id]);
+        return view("empleados/eliminarConfirmar",['empleado'=>$empleados[0]]);
     }
 
 

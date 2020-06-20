@@ -23,7 +23,7 @@
             
             <td><a href='empleados/detalle/{{$empleado->id}}'>Detalle</a></td> 
             <td><a href='empleados/editar/{{$empleado->id}}'>Editar</a></td> 
-            <td><a href='empleados/eliminar/{{$empleado->id}}'>Eliminar</a></td> 
+            <td><a href='empleados/eliminarConfirmar/{{$empleado->id}}'>Eliminar</a></td> 
             
           </tr>       
         @endforeach
