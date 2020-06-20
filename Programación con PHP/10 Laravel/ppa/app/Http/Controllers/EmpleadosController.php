@@ -7,17 +7,18 @@ use Illuminate\Http\Request;
 class EmpleadosController extends Controller
 {
     function index(){
-
         $empleados = DB::select('select * from empleados');
         return view("empleados/index",['empleados'=>$empleados]);
-
     }
 
     function detalle($id){
-
         $empleados = DB::select('select * from empleados where id=' . $id);
         return view("empleados/detalle",['empleado'=>$empleados[0]]);
+    }
 
+    function editar($id){
+        $empleados = DB::select('select * from empleados where id=' . $id);
+        return view("empleados/editar",['empleado'=>$empleados[0]]);
     }
 
 
