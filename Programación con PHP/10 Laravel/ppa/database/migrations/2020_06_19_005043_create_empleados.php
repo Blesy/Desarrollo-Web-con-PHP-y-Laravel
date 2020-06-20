@@ -25,6 +25,9 @@ class CreateEmpleados extends Migration
             $table->string("direccion", 200);
             $table->string("fotografia");
         });
+
+
+        
     }
 
     /**

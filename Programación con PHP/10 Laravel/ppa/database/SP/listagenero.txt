@@ -1,0 +1,7 @@
+DELIMITER //
+CREATE PROCEDURE listagenero2(IN valor varchar(1))
+BEGIN
+   SELECT * FROM empleados WHERE genero=valor;
+END
+//
+DELIMITER ;
