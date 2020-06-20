@@ -4,7 +4,7 @@
 
 <hr/>  
 
- <form action='actualizar/{{$empleado->id}}' method='post' enctype='multipart/form-data' >
+ <form action='../actualizar/{{$empleado->id}}' method='post' enctype='multipart/form-data' >
     
   <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
     <div class='form-group'>
