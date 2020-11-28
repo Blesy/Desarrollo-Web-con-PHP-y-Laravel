@@ -9,7 +9,7 @@
 
 <?php
     echo "<h2>Acceso con indices </h2>";
-    $paises = array("argentina", "mexico", "usa", "japon");
+    $paises = array("argentina", "mexico", "usa", "japon", "españa");
    
     for($i=0; $i < count($paises); $i++){
         echo "indice = $i <br/>";
@@ -44,6 +44,25 @@
     }
 ?>
 
+<?php
+echo "<h2>Acceso Foreach a los valores </h2>";
+$paises = array("argentina", "mexico", "usa", "japon", "brasil");
+foreach($paises as $valor)
+{
+echo $valor;
+echo "<br/>";
+}
+
+echo "<h2>Acceso Foreach a las llaves y valores </h2>";
+$paises = array("argentina", "mexico", "usa", "japon", "colombia");
+foreach($paises as $indice => $valor)
+{
+echo "indice : $indice<br/>";
+echo "valor : $valor <br/> ";
+}
+
+
+?>
 
 
 
