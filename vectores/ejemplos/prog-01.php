@@ -8,6 +8,7 @@
 <body>
 
 <?php
+    echo "<h2>Acceso con indices </h2>";
     $paises = array("argentina", "mexico", "usa", "japon");
    
     for($i=0; $i < count($paises); $i++){
@@ -16,6 +17,25 @@
         }
 
 ?>
+
+<?php
+    echo "<h2>Acceso con reset, next, key y current </h2>";
+    $paises = array("argentina", "mexico", "usa", "japon");
+    reset($paises);
+    do
+    {
+        $clave = key($paises);
+        $valor = current($paises);
+        echo "clave = $clave <br/>";
+        echo "valor = $valor <br/>";
+    }while(next($paises));
+
+
+?>
+
+
+
+
 
 </body>
 </html>
