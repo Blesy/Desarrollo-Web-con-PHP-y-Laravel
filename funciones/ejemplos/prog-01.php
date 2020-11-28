@@ -29,11 +29,34 @@
         echo "</ul>";
     }
 
-
-
+    function sumatoria()
+    {
+    $numeroParametros = func_num_args();
+    $parametros = func_get_args();
+    $suma = 0;
+    for($i=0; $i < $numeroParametros; $i++)
+    {
+    $suma += $parametros[$i];
+    }
+    return $suma;
+    }
+    function incrementar (&$dato, $incremento)
+    {
+     $dato += $incremento;
+    }
 ?>
 
 <?php
+
+
+
+$val = 10;
+echo "Valor original = " . $val . "<br/>";
+incrementar ($val, 2);
+echo "Valor modificado = " . $val . "<br/>";
+
+
+
 
     $a=$_GET['a'];
     $b=$_GET['b'];
@@ -63,10 +86,13 @@
     menuVertical($ops);
 
 
+    $x = sumatoria(1,2,3,4,5);
+    echo "<p>La es suma es: $x</p>";
 
 
+    $y = sumatoria (6,7,8,9,10,11,12,13,14,15);
 
-    
+    echo "<p>La es suma es: $y</p>";
 
 ?>
 
