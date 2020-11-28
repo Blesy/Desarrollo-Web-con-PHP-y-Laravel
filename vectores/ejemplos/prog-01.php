@@ -30,6 +30,18 @@
         echo "valor = $valor <br/>";
     }while(next($paises));
 
+?>
+
+<?php
+    echo "<h2>Acceso each </h2>";
+
+    $paises = array("argentina", "mexico", "usa", "japon");
+    while(list($clave,$valor) = each($paises))
+    {
+    echo "clave = $clave <br/>";
+    echo "valor = $valor <br/>";
+    echo "--------------------<br/>";
+    }
 
 ?>
 
