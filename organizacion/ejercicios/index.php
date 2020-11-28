@@ -26,7 +26,7 @@ echo "<table class='table'>
 ";
 for ($i=0; $i<count($municipios); $i++){
     echo "<tr>
-            <td><img src='escudos/$escudos[$i]' width=200    > </td>
+            <td><img src='escudos/$escudos[$i]' width=200 heigth=200   > </td>
             <td>$municipios[$i]</td>
             <td>$poblacion[$i]</td>
             <td>$superficie[$i]</td>
