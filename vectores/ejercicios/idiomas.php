@@ -15,7 +15,7 @@
 
         echo"<select name='idiomas'>";
         for ($i=0; $i<count($idiomas); $i++){
-             echo "<option value=$i > $idiomas[$i] </option>";
+             echo "<option value='$i' > $idiomas[$i] </option>";
         }
         echo "</select>";
 
