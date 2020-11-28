@@ -7,7 +7,7 @@
 
     $poblacion = array(858638,438434,416299, 135603, 285912);
 
-    $imagenes = array("culiacan.png", 
+    $escudos = array("culiacan.png", 
                 "mazatlan.png", 
                 "ahome.png", 
                 "navolato.png", 

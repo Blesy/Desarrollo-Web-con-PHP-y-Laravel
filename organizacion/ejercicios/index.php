@@ -16,6 +16,7 @@ include ("datos.php");
 echo "<table class='table'>
 <thead class='thead-dark'>
 <tr>
+<th scope='col'>Escudo</th>
 <th scope='col'>Nombre</th>
 <th scope='col'>Población</th>
 <th scope='col'>Superficie</th>
@@ -25,6 +26,7 @@ echo "<table class='table'>
 ";
 for ($i=0; $i<=count($municipios); $i++){
     echo "<tr>
+            <td><img src='escudos/$escudos[$i]'> </td>
             <td>$municipios[$i]</td>
             <td>$poblacion[$i]</td>
             <td>$superficie[$i]</td>
