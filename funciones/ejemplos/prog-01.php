@@ -20,7 +20,7 @@
     $b=$_GET['b'];
     
     $c = 10;
-    $d = 11
+    $d = 11;
 
     $result = sumar($a, $b);
     echo "<p>La es suma es: $result</p>";
