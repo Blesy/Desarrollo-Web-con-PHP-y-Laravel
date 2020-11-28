@@ -20,7 +20,17 @@
         $total += $num;
         }
         return $total;
-        }
+    }
+
+    function menuVertical($opciones){
+        echo"<ul>";
+        while(list($opcion,$enlace)=each($opciones))
+        echo "<li><a href='$enlace'>$opcion</a></li>";
+        echo "</ul>";
+    }
+
+
+
 ?>
 
 <?php
@@ -43,6 +53,20 @@
     $datos= array(1,2,3,4,5,6,7,8,9,10);
     $resultado=suma_vector($datos);
     echo "<p>La es suma es: $resultado</p>";
+
+    $ops=array("Google"=>"http://www.google.com",
+                "Facebook"=>"http://www.facebook.com",
+                "UAS"=>"http://www.uas.edu.mx",
+                "FIC"=>"http://fic.uas.edu.mx",
+                "Mi pagina"=>"http://localhost");
+
+    menuVertical($ops);
+
+
+
+
+
+    
 
 ?>
 
