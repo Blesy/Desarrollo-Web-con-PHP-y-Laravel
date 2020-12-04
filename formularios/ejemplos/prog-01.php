@@ -7,10 +7,10 @@
 </head>
 <body>
     
-    <form action= "procesar01.php" method="post">
+    <form action= "procesar01.php" method="POST">
     <table>    
       <tr><td> Nombre: </td> <td> <input type="text" name="nombre"></td></tr>
-         <tr><td>Edad:</td> <td>  <input type="text" name="edad"></td></tr>
+         <tr><td>Edad:</td> <td>  <input type="number" name="edad"></td></tr>
         <tr><td><input type="submit" value="aceptar"></td></tr>
     </table>
 
