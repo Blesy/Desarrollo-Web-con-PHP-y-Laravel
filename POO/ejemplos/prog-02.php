@@ -13,7 +13,7 @@
         // $rect->CambiarAltura($_GET['a']);
         // $rect->CambiarBase($_GET['b']);
         echo "Area : " . $rect->CalcularArea() . "<br/>";
-        echo "Perimetro: " . $rect->CalcularPerimetro();
+        echo "Perimetro: " . $rect->CalcularPerimetro()."<br/>";
 
     ?>
 
