@@ -10,8 +10,8 @@
     <?php
         include ("rectangulo.php");
         $rect =new Rectangulo();
-        $rect->altura = 10;
-        $rect->base = 5;
+        $rect->altura = $_GET['a'];
+        $rect->base = $_GET['b'];
         echo "Area : " . $rect->CalcularArea() . "<br/>";
         echo "Perimetro: " . $rect->CalcularPerimetro();
 
