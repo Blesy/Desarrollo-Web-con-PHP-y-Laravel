@@ -7,7 +7,9 @@ class Rectangulo {
         $this->CambiarAltura($a);
         $this->CambiarBase($b);
         }
-
+        function __destruct(){
+            echo "Bye...";
+            }
     function CambiarAltura($a){
         if ($a<0){
             echo "Error en el valor de altura<br/>";
