@@ -5,7 +5,7 @@ class Rectangulo {
 
     function CambiarAltura($a){
         if ($a<0){
-            echo "Error en el valor de altura";
+            echo "Error en el valor de altura<br/>";
             $this->altura=0;
         }
         else    
@@ -14,7 +14,7 @@ class Rectangulo {
     function CambiarBase($b){
         if ($b<0){
             $this->base=0;
-            echo "Error en el valor de base";
+            echo "Error en el valor de base<br/>";
         } 
             else    
             $this->base=$b;
