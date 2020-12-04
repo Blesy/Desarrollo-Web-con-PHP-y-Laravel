@@ -3,6 +3,11 @@ class Rectangulo {
     private $base;
     private $altura;
 
+    function __construct($b, $a){
+        $this->CambiarAltura($a);
+        $this->CambiarBase($b);
+        }
+
     function CambiarAltura($a){
         if ($a<0){
             echo "Error en el valor de altura<br/>";
