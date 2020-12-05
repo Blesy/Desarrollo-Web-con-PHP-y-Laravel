@@ -10,8 +10,10 @@
     <?php
         session_start();
         if (!isset($_SESSION["auth"])){
-            echo "Debes iniciar sesión";
-            echo "<a href='index.php'>autentificar</a>";
+            //echo "Debes iniciar sesión";
+            
+            //echo "<a href='index.php'>autentificar</a>";
+            header("Location: index.php");
         }
         else {
             $usuario = $_SESSION["usuario"];
