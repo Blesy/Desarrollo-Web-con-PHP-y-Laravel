@@ -8,12 +8,12 @@
 <body>
 
 <?php
-include ("../../poo/ejemplos/rectangulo2.php");
-$rect = new Rectangulo($_POST['base'], $_POST['altura']);
-echo "Area : " . $rect->CalcularArea() . "<br/>";
-echo "Perimetro: " . $rect->CalcularPerimetro();
+    if (isset($_POST['sexo'])){
+        $sexo = $_POST['sexo'];
+        echo "Sexo:" . $sexo . "<br/>";
+    }
+    else
+        echo "No selecciono el sexo <br/>";
 ?>
-
-
 </body>
 </html>
