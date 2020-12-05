@@ -18,11 +18,10 @@ $consultaSQL = "INSERT INTO empleados (nombre, fecha, sueldo) VALUES (?, ?, ?)";
 $comandoSQL = $conexion->prepare($consultaSQL);
 // Obtiene los valores del formulario
 $nombre = $_GET['nombre'];
-$edad
-= $_GET['fecha'];
+$fecha= $_GET['fecha'];
 $sueldo = $_GET['sueldo'];
 // Asigna valores a cada uno de los 3 parametro de la consulta
-$comandoSQL->bind_param("ssd", $nombre, $edad, $sueldo);
+$comandoSQL->bind_param("ssd", $nombre, $fecha, $sueldo);
 $comandoSQL->execute(); // Ejecuta consulta INSERT
 echo "Cliente registrado con exito!!!";
 } // fin try
