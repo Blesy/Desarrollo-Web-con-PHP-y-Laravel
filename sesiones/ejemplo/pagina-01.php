@@ -13,6 +13,7 @@
         header("Location: index.php");
     }
 ?>
+    <a href="cerrar.php"> Cerrar sesión</a>
 
     <h1>Pagina 01</h1>
 </body>

@@ -26,5 +26,8 @@
          </ul>";
             }
     ?>        
+
+    <a href="cerrar.php"> Cerrar sesión</a>
+
 </body>
 </html>

@@ -7,14 +7,16 @@
 </head>
 <body>
 
-<?php
+  <?php
     session_start();
-    if (!isset($_SESSION["auth"])){
-        header("Location: index.php");
-    }
-?>
-    <a href="cerrar.php"> Cerrar sesión</a>
 
-    <h1>Pagina 02</h1>
+    session_destroy();
+
+    header("Location: menu.php");
+  
+  ?>
+
+
+    
 </body>
 </html>
