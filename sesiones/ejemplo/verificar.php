@@ -8,11 +8,15 @@
 <body>
     
 <?php
+    session_start();
     $usuario = $_POST['usuario'];
     $pass = $_POST['pass'];
 
-    if ($usuario=='gerardo' && $pass='123')
+    if ($usuario=='gerardo' && $pass='123'){
+        $_SESSION["auth"]=TRUE;
+        $_SESSION["usuario"]=$usuario;
         header("Location: menu.php");
+    }    
     else
     {
         echo "Error en usuario o contraseña<br/>";
