@@ -8,7 +8,17 @@
 <body>
     
 <?php
-    $usuario = 
+    $usuario = $_POST['usuario'];
+    $pass = $_POST['pass'];
+
+    if ($usuario=='gerardo' && $pass='123')
+        header("Location: menu.php");
+    else
+    {
+        echo "Error en usuario o contraseña<br/>";
+        echo "<a href='index.php'>Intenta de nuevo </a>";
+    }    
+
 
 ?>
 

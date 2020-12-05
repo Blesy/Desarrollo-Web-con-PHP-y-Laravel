@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bienvenidos!!!</h1>
+    <ul>
+        <li><a href="pagina-01.php"> Pagina 01</a></li>
+        <li><a href="pagina-02.php"> Pagina 02</a></li>
+        <li><a href="pagina-03.php"> Pagina 03</a></li>
+   </ul>
+
+</body>
+</html>
