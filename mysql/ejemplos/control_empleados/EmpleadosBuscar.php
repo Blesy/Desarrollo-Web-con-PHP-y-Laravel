@@ -32,11 +32,12 @@ try{
     $resultado = $comandoSQL->fetch(); // obtiene los datos
     if ($resultado==true){
         echo "<table>";
+        echo "<caption>Datos de Empleado</caption>";
         echo "<tr>";
         echo "<td>Nombre </td> <td> $nombre </td>";
         echo "</tr>";
         echo "<tr>";
-        echo "<td>Edad</td> <td> $edad </td>";
+        echo "<td>Fecha de Nacimiento</td> <td> $edad </td>";
         echo "</tr>";
         echo "<tr>";
         echo "<td>Saldo</td> <td> $saldo </td>";
