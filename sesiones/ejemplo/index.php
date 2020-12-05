@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+
+<?php
+    session_start();
+    if (isset($_SESSION["auth"])){
+        header("Location: menu.php");
+    }
+?>
+
+
 <form action="verificar.php" method="POST" >
 <table>
     <caption>Autentificación</caption>

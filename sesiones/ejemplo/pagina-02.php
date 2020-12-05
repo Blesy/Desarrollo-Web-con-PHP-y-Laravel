@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+
+<?php
+    session_start();
+    if (!isset($_SESSION["auth"])){
+        header("Location: index.php");
+    }
+?>
     <h1>Pagina 02</h1>
 </body>
 </html>
