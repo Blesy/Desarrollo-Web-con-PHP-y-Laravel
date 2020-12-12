@@ -16,6 +16,13 @@
     <a href="empleados/detalle">Infornacion de empleado</a>
 
     </li>
+    <li>
+    <a href="productos/">Productos</a>
+    </li>
+    <li>
+    <a href="productos/detalle">Informacion de productos</a>
+
+    </li>
 </ul>
 
 </body>

@@ -18,6 +18,11 @@ Route::get('/', function () {
 });
 
 
+
+Route::get('/productos', 'ProductosController@index');
+Route::get('/productos/detalle', 'ProductosController@detalle');
+
+
 Route::get('/empleados', 'EmpleadosController@index');
 
 Route::get('/empleados/detalle', 'EmpleadosController@detalle');
