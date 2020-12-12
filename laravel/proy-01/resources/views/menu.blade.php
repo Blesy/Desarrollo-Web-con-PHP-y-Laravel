@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-
+<body>  
+  
+  
 
 <ul>
     <li>
-    <a href="empleados/index">Empleados</a>
+    <a href="empleados/">Empleados</a>
     </li>
     <li>
     <a href="empleados/detalle">Infornacion de empleado</a>
