@@ -14,28 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('menu');
 });
 
-Route::get('/saludo/{nombre}', function ($nombre) {
-    return "Hola {$nombre}" ;
-    });
 
-Route::get('/saludo2', function () {
-        return 'Hola mundo 2!!!';
-});    
+Route::get('/empleados', 'EmpleadosController@index');
 
-Route::get('/empleados/detalles/{id}', function ($id) {
-    return "Datos del empleado: {$id}";
-    });
-
-    Route::get('saludo/{nombre}/{apodo?}', function ($nombre, $apodo = null) {
-    if ($apodo) {
-    return "Bienvenido {$nombre}, tu apodo es {$apodo}";
-    } else {
-    return "Bienvenido {$nombre}, no tienes apodo";
-    }
-    });
-
-    Route::get('/empleados', 'EmpleadosController@index');
-
+Route::get('/empleados/detalle', 'EmpleadosController@detalle');
